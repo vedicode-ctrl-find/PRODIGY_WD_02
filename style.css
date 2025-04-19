@@ -1,0 +1,91 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url('https://i.pinimg.com/736x/44/66/ab/4466ab764530ff148c63aff0b72183c9.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 40px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  .stopwatch-img {
+    max-width: 100%;
+    height: 40vh;
+    margin-bottom: 20px;
+    object-fit: contain;
+    border-radius: 12px;
+  }
+  
+  .stopwatch-box,
+  .instructions-box {
+    width: 50%;
+    background-color: rgb(244, 232, 230);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stopwatch-box {
+    text-align: center;
+  }
+  
+  #display {
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    margin-bottom: 20px;
+  }
+  
+  .buttons button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: 0.3s ease;
+  }
+  
+  #start {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  #lap {
+    background-color: #ffeb99;
+  }
+  
+  #reset {
+    background-color: #64b5f6;
+    color: white;
+  }
+  
+  #laps {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    text-align: left;
+  }
+  
+  #laps li {
+    padding: 5px 10px;
+    background-color: #f1f1f1;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .instructions-box p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
