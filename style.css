@@ -1,91 +1,110 @@
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background-image: url('https://i.pinimg.com/736x/44/66/ab/4466ab764530ff148c63aff0b72183c9.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 40px;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-  }
-  
-  .stopwatch-img {
-    max-width: 100%;
-    height: 40vh;
-    margin-bottom: 20px;
-    object-fit: contain;
-    border-radius: 12px;
-  }
-  
-  .stopwatch-box,
-  .instructions-box {
-    width: 50%;
-    background-color: rgb(244, 232, 230);
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  .stopwatch-box {
-    text-align: center;
-  }
-  
-  #display {
-    font-size: 70px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .buttons {
-    margin-bottom: 20px;
-  }
-  
-  .buttons button {
-    padding: 12px 24px;
-    font-size: 16px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    margin: 0 10px;
-    transition: 0.3s ease;
-  }
-  
-  #start {
-    background-color: #28a745;
-    color: white;
-  }
-  
-  #lap {
-    background-color: #ffeb99;
-  }
-  
-  #reset {
-    background-color: #64b5f6;
-    color: white;
-  }
-  
-  #laps {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
-    text-align: left;
-  }
-  
-  #laps li {
-    padding: 5px 10px;
-    background-color: #f1f1f1;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    font-weight: bold;
-  }
-  
-  .instructions-box p {
-    font-size: 16px;
-    line-height: 1.6;
-  }
-  
+  font-family: 'Poppins', sans-serif;
+  background-color: #021a36;
+  color: #fff;
+  display: flex;
+  flex-direction: column;   
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+
+.stopwatch {
+  position: relative;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+
+  /* Glowing effect */
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8),
+               0 0 16px rgba(255, 255, 255, 0.5),
+               0 0 24px rgba(255, 255, 255, 0.3);
+}
+
+.container {
+  position: relative;
+  border-radius: 50%;
+  width: 360px;
+  height: 360px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(239, 189, 96, 0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.timer {
+  position: relative;
+  color: white;
+  font-size: 75px;
+  font-weight: bold;
+  z-index: 1;
+
+  /* Glowing effect */
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8),
+               0 0 16px rgba(255, 255, 255, 0.5),
+               0 0 24px rgba(255, 255, 255, 0.3);
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.controls button { 
+  margin: 0.5rem;
+  padding: 1rem 2.5rem; 
+  font-size: 1.2rem;    
+  border-radius: 12px;   
+  border: none;
+  font-weight: 600;
+  background-color: #1d2e61;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgba(239, 189, 96, 0.3);
+}
+
+.controls button:hover {
+  background-color: #3a3aff;
+}
+
+#laps {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#laps li {
+  font-size: 1.2rem; /* medium-sized text */
+  background-color: #2e2e50;
+  color: #ffffff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00000030;
+  min-width: 120px;
+  text-align: center;
+}
