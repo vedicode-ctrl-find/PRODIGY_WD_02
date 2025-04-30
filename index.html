@@ -1,45 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Stopwatch</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Stopwatch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
 </head>
 <body>
 
-    <h1 style="color: aliceblue;text-align: center; font-size: 55px;">Stopwatch</h1>
-
+ <h1 class="stopwatch">STOPWATCH</h1>
+ 
+  <br>
   <div class="container">
-    
-    <div class="stopwatch-box">
-        <img src="https://m.media-amazon.com/images/I/61X3XTu5kIL.png" class="stopwatch-img" alt="Stopwatch Image">
-      <div id="display">00:00:00</div>
-      <div class="buttons">
-        <button id="start">Start</button>
-        <button id="lap">Lap</button>
-        <button id="reset">Reset</button>
-      </div>
-      <h2>Laps</h2>
-      <ul id="laps"></ul>
-    </div>
+    <video autoplay muted loop class="background-video">
+      <source src="./VediCafe.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="timer" id="display">00:00:00</div>
+  </div>
 
-    
-    <div class="instructions-box">
-        <h2>About This Stopwatch</h2>
-        <p>Count time effortlessly right in your browser — instant, accurate, and easy to use!</p>
-        <p>This stopwatch lets you measure the time elapsed between two or more moments. Just hit <strong>Start</strong> to begin and <strong>Stop</strong> when you're done. Use <strong>Lap</strong> to capture time without stopping the count.</p>
-        <p>Perfect for studying, workouts, meetings, classrooms, or just for fun!</p>
-        
-      
-        <h2>How do I use a stopwatch online?</h2>
-        <p>1. When you're ready to start counting, press the <strong>Start</strong> button.</p>
-        <p>2. Use the <strong>Lap</strong> button to check the time without stopping the timer.</p>
-        <p>3. Press <strong>Stop</strong> to pause the stopwatch and check the end result.</p>
-        <p>4. Now, you can either <strong>Reset</strong> and start again or continue from the current time.</p>
-        <p>That's it, happy counting! </p>
-      </div>
-      
+  <br><br>
+
+  <div class="controls">
+    <button onclick="startStop()" id="startStopBtn">Start</button>
+    <button onclick="lap()">Lap</button>
+    <button onclick="reset()">Reset</button>
+  </div>
+
+    <ul class="laps" id="laps" ></ul>
+ 
   <script src="script.js"></script>
+
 </body>
 </html>
