@@ -1,4 +1,4 @@
-body {
+body { 
   font-family: 'Poppins', sans-serif;
   background-color: #021a36;
   color: #fff;
@@ -6,18 +6,17 @@ body {
   flex-direction: column;   
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
 }
 
-
 .stopwatch {
-  position: relative;
   color: white;
-  font-size: 40px;
+  font-size: 2rem;
   font-weight: bold;
-
-  /* Glowing effect */
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.8),
                0 0 16px rgba(255, 255, 255, 0.5),
                0 0 24px rgba(255, 255, 255, 0.3);
@@ -28,6 +27,8 @@ body {
   border-radius: 50%;
   width: 360px;
   height: 360px;
+  max-width: 90vw;
+  max-height: 90vw;
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(239, 189, 96, 0.3);
   backdrop-filter: blur(10px);
@@ -44,6 +45,7 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
 .main {
   display: flex;
   flex-direction: column;
@@ -53,13 +55,10 @@ body {
 }
 
 .timer {
-  position: relative;
   color: white;
-  font-size: 75px;
+  font-size: 4rem;
   font-weight: bold;
   z-index: 1;
-
-  /* Glowing effect */
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.8),
                0 0 16px rgba(255, 255, 255, 0.5),
                0 0 24px rgba(255, 255, 255, 0.3);
@@ -68,13 +67,14 @@ body {
 .controls {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .controls button { 
   margin: 0.5rem;
-  padding: 1rem 2.5rem; 
-  font-size: 1.2rem;    
+  padding: 0.8rem 2rem;
+  font-size: 1rem;    
   border-radius: 12px;   
   border: none;
   font-weight: 600;
@@ -82,6 +82,7 @@ body {
   color: white;
   cursor: pointer;
   box-shadow: 0 8px 32px rgba(239, 189, 96, 0.3);
+  transition: background-color 0.3s ease;
 }
 
 .controls button:hover {
@@ -96,15 +97,37 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  width: 100%;
+  max-width: 300px;
 }
 
 #laps li {
-  font-size: 1.2rem; /* medium-sized text */
+  font-size: 1rem;
   background-color: #2e2e50;
   color: #ffffff;
   padding: 0.6rem 1.2rem;
   border-radius: 10px;
   box-shadow: 0 0 10px #00000030;
-  min-width: 120px;
   text-align: center;
+}
+
+/* Responsive tweaks */
+@media (max-width: 500px) {
+  .timer {
+    font-size: 2.5rem;
+  }
+
+  .controls button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.4rem;
+  }
+
+  .container {
+    width: 250px;
+    height: 250px;
+  }
+
+  .stopwatch {
+    font-size: 1.5rem;
+  }
 }
